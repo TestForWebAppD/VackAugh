@@ -55,7 +55,7 @@ class authAdminController {
             const token = generateAccessToken(userId, userRoles);
 
             // Перенаправляем пользователя на фронтенд с токеном
-            res.redirect(`http://http://45.9.40.72:3000/login?token=${token}&name=${username}`);
+            res.redirect(`http://http://45.9.40.72:3001/login?token=${token}&name=${username}`);
         } catch (e) {
             console.error(e); // Логирование ошибки
             res.status(500).json({ message: 'GitHub Login Error' }); // Ответ с ошибкой
